@@ -1,12 +1,9 @@
 from flask import  Flask, render_template
-import requests
-import json
+from .config import DevConfig
 
 app = Flask(__name__)
 
-# posts =[
-#     {'id':'hello', 'age': '12', 'name' : 'Angie'}
-# ]
+app.config.from_object(DevConfig)
 
 @app.route('/', methods=['GET'])
 def home():
