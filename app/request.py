@@ -48,6 +48,7 @@ def process_articles(new_list):
     '''
     new_articles = []
     for new_item in new_list:
+        title = new_item.get('title')
         author = new_item.get('author')
         description = new_item.get('description')
         url = new_item.get('url')
@@ -55,7 +56,7 @@ def process_articles(new_list):
         publishedAt = new_item.get('publishedAt')
         content = new_item.get('content')
         if url:
-            new_object = News(author,description,url,urlToImage,publishedAt,content)
+            new_object = News(title,author,description,url,urlToImage,publishedAt,content)
             new_articles.append(new_object)
     return new_articles
 
