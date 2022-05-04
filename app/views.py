@@ -10,7 +10,15 @@ def index():
 
     # Getting tesla new
     tesla_news = get_news('tesla')
-    apple_news = get_news('apple')
+
     # print(tesla_news)
     title = 'Home - News Today Hot Content'
-    return render_template('index.html',title =title,  tesla = tesla_news, apple = apple_news )
+    return render_template('index.html',title =title,  tesla = tesla_news )
+
+@app.route('/apple')
+def apple():
+    apple_news = get_news('apple')
+
+    title = "Apple news"
+
+    return render_template('apple.html', apple=apple_news)
