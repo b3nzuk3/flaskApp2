@@ -1,3 +1,5 @@
+{% import 'macros.html' as macro %}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -7,18 +9,9 @@
 </head>
 
 <body>
-  {% for new in apple %}
-  <h2> {{ new.title }}</h2>
   <div class="">
-    <h4>{{ new.description }}</h4>
-    <ul>
-      <li>{{ new.content }}
-      </li>
-    </ul>
+      {{ macro.displayNewsList(tesla) }}
   </div>
-
-
-  {% endfor %}
 </body>
 
 </html>
