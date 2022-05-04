@@ -15,10 +15,13 @@ def get_news(category):
     Function that gets the json response to our url request
     '''
     get_news_url = base_url.format(category,api_key)
+    print(get_news_url)
+
 
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
+        print(get_news_response)
         new_articles = None
 
 
@@ -26,7 +29,9 @@ def get_news(category):
             new_articles_list = get_news_response['articles']
             new_articles = process_articles(new_articles_list)
 
-    print(new_articles)
+
+
+
     return new_articles
 
 # left it here
