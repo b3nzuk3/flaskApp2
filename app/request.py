@@ -1,6 +1,6 @@
 from app import app
 import urllib.request,json
-from .models import movie
+from .models import news
 News = news.News
 
 # Getting api key
@@ -19,15 +19,17 @@ def get_news(category):
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
-
         new_articles = None
 
+
         if get_news_response['articles']:
-            new_articles_list = get_new_response['articles']
+            new_articles_list = get_news_response['articles']
             new_articles = process_articles(new_articles_list)
 
-
+    print(new_articles)
     return new_articles
+
+# left it here
 
 def process_articles(new_list):
     '''
@@ -41,17 +43,15 @@ def process_articles(new_list):
     '''
     new_articles = []
     for new_item in new_list:
-        author = new_item.get('id')
-        description = new_item.get('original_title')
-        url = new_item.get('overview')
-        urlToImage = new_item.get('poster_path')
-        publishedAt = new_item.get('vote_average')
-        content = new_item.get('vote_count')
-
+        author = new_item.get('author')
+        description = new_item.get('description')
+        url = new_item.get('url')
+        urlToImage = new_item.get('urlToImage')
+        publishedAt = new_item.get('publishedAt')
+        content = new_item.get('content')
         if url:
-            new_object = Movie(author,description,url,urlToImage,publishedAt,content)
+            new_object = News(author,description,url,urlToImage,publishedAt,content)
             new_articles.append(new_object)
-
     return new_articles
 
 # def get_movie(id):
