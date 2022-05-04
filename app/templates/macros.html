@@ -1,15 +1,19 @@
 {% macro displayNewsList(news_list) %}
 {% for new in news_list %}
 
-<div class="container news-content">
+<article class="article">
+
+
+  <div class="container news-content">
 
 
     <div class="">
-      <h2>{{ new.title }}</h2>
-      <h4 class="overview">{{ new.description }}</h4>
+      <h2 class="border-bottom mb-2">{{ new.title }}</h2>
+      <hr>
+      <h5 class="overview">{{ new.description }}</h5>
       <p class=""> <b> {{ new.content}}</b> </p>
       <br>
-      <p class="text-muted">By <span style="color:blue;">{{new.author}}</span>      {{ new.publishedAt }}</p>
+      <p class="text-muted">By <span style="color:blue;">{{new.author}}</span> {{ new.publishedAt }}</p>
 
 
 
@@ -18,10 +22,16 @@
 
     </div>
     <div class="container">
-    <a href="{{new.url}}"><img class="images" src="{{new.urlToImage}}" alt=""></a>
+      <a href="{{new.url}}"><img class="images" src="{{new.urlToImage}}" alt=""></a>
     </div>
 
-</div>
+  </div>
+
+
+
+  <hr class="hr-1" style=" background-color:#000000;">
+</article>
+
 
 {% endfor %}
 {% endmacro %}
