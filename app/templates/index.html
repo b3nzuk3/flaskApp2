@@ -1,17 +1,9 @@
+{% extends 'layout.html' %}
 {% import 'macros.html' as macro %}
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+{% block content %}
+<div class="">
+  {{ macro.displayNewsList(tesla) }}
+</div>
 
-<head>
-  <meta charset="utf-8">
-  <title>{{title}}</title>
-</head>
-
-<body>
-  <div class="">
-      {{ macro.displayNewsList(tesla) }}
-  </div>
-</body>
-
-</html>
+{% endblock %}
