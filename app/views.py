@@ -22,3 +22,11 @@ def apple():
     title = "Apple news"
 
     return render_template('apple.html', apple=apple_news)
+
+@app.route('/google')
+def apple():
+    google_news = get_news('google')
+
+    title = "Google news"
+
+    return render_template('google.html', google=google_news)
