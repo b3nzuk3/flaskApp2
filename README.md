@@ -1,24 +1,22 @@
 # News Today
 
 This project was generated with [Python3.10](https://www.python.org/downloads/release/python-3100/) 
-#### This site is a Nes site application, Apr-26-2022
+#### This site is a Nes site application, May-05-2022
 ## Author
 #### By b3nzuk3
 ## Description
-      This a password manager made purely with python and passion. Users can save account details i.e usernames and passwords rather than forgetting them, thus this is here to make life easier for everyone who is prone to forget their details
+     This is a web application displaying news articles from top leading innovation companies around the world. i.e Google, Tesla and Apple
 
 ## Behavior Driven Development
-      1. Allows the user to create a new account by inputing the username.
-      2. Once user enters their username a password is generated.
-      3. They can choose to input the random password or input their own.
-      4. Once completed they can save there account credentials.
-      5. The user can later come and check on their credentials once saved or delete them.
-      6. They can do so by searching for it or displaying all of them at once.
-      7. Once done with either processes they can choose to exit the application.
-
-
+      1. When the app is loaded it first make a get request to the News Api.
+      2. It then process the results and stores it in a list.
+      3. The content is then rendered in the templates using placeholders and hence able to be displayed in the page.
+      4. All this is made possible with in built classes and functions.
+      5. The app is pushed to heroku where it will be available for display globally unlike before where it was visible locally.
+      
 ## Setup/Installation Requirements
-* To install applicaton one of the fundamental requirements:
+* No installation is required. You just need to click on the link to load the application.
+* If you want to clone it locally you can follow the running instructions below.
 
        $ python3.10
 
@@ -41,7 +39,7 @@ The site might have an update in the near future but as for now no challenges.
 ## Technologies Used
 python3.10
 
-this site was accomplished by purely incoperating python programming language
+this site was accomplished by purely incoperating python programming language and using heroku hosting services.
 
 ## Support and contact details
 I've linked any and all means of communications at [my Omega website](https://b3nzuk3.github.io/omega-phase1/) which is about me.
