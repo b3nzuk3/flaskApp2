@@ -1,6 +1,6 @@
 class Config:
 
-    NEWS_BASE_URL ='https://newsapi.org/v2/everything?q={}&from=2022-04-04&sortBy=publishedAt&apiKey={}'
+    NEWS_BASE_URL ='https://newsapi.org/v2/everything?q={}&from=2022-04-05&sortBy=publishedAt&apiKey={}'
 
 class ProdConfig(Config):
     '''
